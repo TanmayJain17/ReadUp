@@ -1,0 +1,17 @@
+#navigation{
+    position:sticky;
+    top: 0px;
+    z-index:1;
+}
+/*why not fixed ??*/
+#contents{
+    height:100%;
+}
+#footer{
+    position:fixed;
+    left:0px;
+    bottom:0px;
+   /* height:30px; */
+    width:100%;
+    background-color: var(--light);
+}
