@@ -1,6 +1,7 @@
 const express = require('express')
 const { db } = require('./db/model')
 const path = require('path')
+const PORT = process.env.PORT || 4747
 const userRoute = require('./routes/users/index')
 const postRoute = require('./routes/posts/index')
 const commentRoute = require('./routes/comments/index')
@@ -15,8 +16,8 @@ app.use('/api/comments',commentRoute)
 
 db.sync({alter: true})
 .then(()=>{
-    app.listen(4747,()=>{
-        console.log('server started on http://localhost:4747')
+    app.listen(PORT,()=>{
+        console.log(`server started on http://localhost:${PORT}`)
     })
 })
 .catch((err)=>{
